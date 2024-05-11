@@ -47,7 +47,7 @@ h1 {
 .section__header {
   max-width: 600px;
   margin-bottom: 1rem;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 600;
   line-height: 3rem;
   color: var(--text-dark);
@@ -194,9 +194,13 @@ nav {
 
 .about__image img {
   max-width: 450px;
+  /* height: 350px; */
   margin: auto;
+  object-fit: cover;
   border-radius: 5px;
 }
+
+
 
 
 .service {
@@ -215,7 +219,7 @@ nav {
 
 .service__content {
   grid-column: 1/3;
-  padding: 2rem 4rem;
+  padding: 1rem 2rem;
   background-color: var(--white);
 }
 
@@ -296,6 +300,7 @@ nav {
 
 .footer__container {
   display: flex;
+  flex-direction: column;
   /* gap: 4rem 2rem; */
 }
 
@@ -350,14 +355,29 @@ nav {
   text-align: center;
 }
 
+.mobile-logo {
+  font-size: 1px important; 
+}
 @media (width > 576px) {
+
+   .mobile-logo {
+    display: none;
+    color: var(--primary-color)
+   }
   .room__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer__container {
+  ._container {
     grid-template-columns: repeat(2, 1fr);
   }
+
+
+  .footer__container {
+  flex-direction: row;
+
+  }
+  
 }
 
 @media (width > 768px) {
